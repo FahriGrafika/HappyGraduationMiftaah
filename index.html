@@ -2,85 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>MIFTAH</title>
     <style>
-    .kado{
-        width: 100px;
-        height: 100px;
-        cursor: pointer;
-    }
-    button{
-        padding:0px;
-        border: none;
-        background-color: transparent;
-    }
-    .miftah {
-    width: 10%;
-    height: 20%;
-    border-radius: 50%;
-    background-image: url(img/tayo.jpg);
-    background-size: cover;
-    background-position: center center;
-    box-shadow: 0 0 0 0.5px #ffdf00;
-}
-h1 {
-    color: #ffdf00;
-    font-weight: bold;
-    text-shadow: 1.5px 1.5px 0 white;
-}
-    p{
-        font-size: 1em;
-        font-weight: bold;
-        color: #a6e7ff ;
-    }
-    @keyframes moveRandom {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(20%);
-    }
-    50% {
-        transform: translateX(-15%);
-    }
-    75% {
-        transform: translateX(10%);
-    }
-    100% {
-        transform: translateX(-5%);
-    }
-}
-.kado {
-    animation: moveRandom 2s linear infinite;
-}
-</style>
+        .kado {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 0px;
+            border: none;
+            background-color: transparent;
+        }
+
+        .miftah {
+            width: 10%;
+            height: 20%;
+            border-radius: 50%;
+            background-image: url(img/tayo.jpg);
+            background-size: cover;
+            background-position: center center;
+            box-shadow: 0 0 0 0.5px #ffdf00;
+        }
+
+        h1 {
+            color: #ffdf00;
+            font-weight: bold;
+            text-shadow: 1.5px 1.5px 0 white;
+            font-size: 36px; /* Default font size */
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: bold;
+            color: #a6e7ff;
+        }
+
+        @keyframes moveRandom {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(20%);
+            }
+            50% {
+                transform: translateX(-15%);
+            }
+            75% {
+                transform: translateX(10%);
+            }
+            100% {
+                transform: translateX(-5%);
+            }
+        }
+
+        .kado {
+            animation: moveRandom 2s linear infinite;
+        }
+
+        /* Media query for smaller screens (e.g., Android phones) */
+        @media (max-width: 768px) {
+            .miftah {
+                width: 40%; /* Adjust the size for smaller screens */
+                height: auto; /* Let the height adjust based on content */
+            }
+            h1 {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+            p {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>
-        <div id="text">
-        </div>
-    <script>
-        var i=0,text;
-        text="Happy Graduation"
-    
-        function ketik(){
-            if (i<text.length){
-                document.getElementById("text").innerHTML+=text.charAt(i);
-                i++;
-                setTimeout(ketik,500)
+        <div id="text"></div>
+        <script>
+            var i = 0, text;
+            text = "Happy Graduation";
+
+            function ketik() {
+                if (i < text.length) {
+                    document.getElementById("text").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(ketik, 500);
+                }
             }
-        }
-        ketik();
-    </script>
+
+            ketik();
+        </script>
     </h1><br>
 
     <div class="miftah"></div>
     <div class="greetings">
-    <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
+        <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
         <span>M</span>
         <span>I</span>
         <span>F</span>
@@ -99,13 +119,10 @@ h1 {
     </div>
 
     <button>
-    <a href="flower.html">
-        <img class="kado" src="img/kad.png" alt="icon">
-    </a>
-    <center><p>Klick Kadonya</p></center>
+        <a href="flower.html">
+            <img class="kado" src="img/kad.png" alt="icon">
+        </a>
+        <center><p>Klick Kadonya</p></center>
     </button>
-
-    
-    </div>
 </body>
 </html>
