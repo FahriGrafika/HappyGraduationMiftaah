@@ -21,15 +21,13 @@
 
         .miftah {
             width: 10%;
-            padding-top: 10%; /* Maintain a 1:1 aspect ratio (width:height) */
-            border-radius: 50%;
-            overflow: hidden; /* Ensure the image doesn't overflow the rounded container */
+            height: 20%;
             box-shadow: 0 0 0 0.5px #ffdf00;
         }
 
         .miftah img {
             width: 100%; /* Ensure the image takes the full width of the container */
-            height: auto; /* Allow the height to adjust based on content */
+            height: 100%; /* Ensure the image takes the full height of the container */
             object-fit: cover; /* Scale the image to cover the entire container */
         }
 
@@ -72,7 +70,7 @@
         @media (max-width: 768px) {
             .miftah {
                 width: 40%; /* Adjust the size for smaller screens */
-                padding-top: 40%; /* Maintain a 1:1 aspect ratio for the smaller container */
+                height: auto; /* Let the height adjust based on content */
             }
             h1 {
                 font-size: 24px; /* Adjust font size for smaller screens */
