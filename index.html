@@ -23,10 +23,13 @@
             width: 10%;
             height: 20%;
             border-radius: 50%;
-            background-image: url(img/tayo.jpg);
-            background-size: cover;
-            background-position: center center;
             box-shadow: 0 0 0 0.5px #ffdf00;
+        }
+
+        .miftah img {
+            width: 100%; /* Ensure the image takes the full width of the container */
+            height: 100%; /* Ensure the image takes the full height of the container */
+            object-fit: cover; /* Scale the image to cover the entire container */
         }
 
         h1 {
@@ -98,7 +101,10 @@
         </script>
     </h1><br>
 
-    <div class="miftah"></div>
+    <div class="miftah">
+        <img src="img/tayo.jpg" alt="Tayo Image">
+    </div>
+
     <div class="greetings">
         <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
         <span>M</span>
